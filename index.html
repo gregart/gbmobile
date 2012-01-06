@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>GB Mobile</title>
+<!--Appel de la bibliotheque JQuery en ligne-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+	</head>
+	
+	
+	<body> 
+	
+		<div data-role="page">
+		
+			<div data-role="header" data-id="myheader" data-position="fixed">
+				<h1>GB Mobile</h1>
+			</div>
+		
+			<div data-role="content">	
+				<p>
+				<h2>Aujourdhui sur GB Radio</h2>
+				<ul data-role="listview">
+					<li><a href="emissions/gbmorning.html"><img src="img/logo/logo5.jpg">
+							<h3 class="ui-li-heading">GB Morning</h3>
+							<p>à la pause de 9h30</p>
+					</a></li>
+				
+					<li><a href="emissions/gbbreak.html"><img src="img/logo/logo6.jpg">
+							<h3 class="ui-li-heading">GB Break</h3>
+							<p>à la pause de 11h15</p>
+					</a></li>
+				
+					<li><a href="emissions/gbnews.html"><img src="img/logo/logo7.jpg">
+							<h3 class="ui-li-heading">GB News</h3>
+							<p>à la pause de 15h30</p>
+					</a></li>
+					
+					<li><a href="emissions/gbculture.html"><img src="img/logo/logo1.jpg">		<!--A Gérer en Php-->
+							<h3 class="ui-li-heading">emission du jour</h3>			<!--A Gérer en Php-->
+							<p>fonction du jour</p> 								<!--A Gérer en Php-->
+					</a></li>														<!--A Gérer en Php-->
+				</ul>
+			
+				</p>		
+			</div>
+		
+			<div data-role="footer" data-id="myfooter" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="hebdomadaires.html" data-role="button" data-icon="grid" data-iconpos="top">Hebdomadaires</a></li>
+						<li><a href="index.html" data-role="button" data-icon="info" data-iconpos="top">???</a></li>
+						<li><a href="tel:+33637739335" data-role="button" data-icon="star" data-iconpos="top">Tel.</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	
+	</body>
+
+</html>
