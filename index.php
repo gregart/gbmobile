@@ -22,19 +22,19 @@
 			    	var song = document.getElementsByTagName('audio')[0];
 			       
 					if (song.paused)
-					{
-					$.mobile.showPageLoadingMsg();
-					song.play();
-			 		setTimeout(function()
-				        {
-				        $.mobile.hidePageLoadingMsg();
-				        },5000);
-					}
+						{
+						$.mobile.showPageLoadingMsg();
+						song.play();
+				 		setTimeout(function()
+					        {
+					        $.mobile.hidePageLoadingMsg();
+					        },5000);
+						}
 					else
-					{
-					song.pause();
-					}   	
-}
+						{
+						song.pause();
+						}   	
+					}
 		</script>
 	</head>
 	
