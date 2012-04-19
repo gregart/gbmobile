@@ -49,7 +49,7 @@
 			</div>
 		
 			<div data-role="content">	
-				<h2>Aujourdhui sur GB Radio</h2>
+				<h2>Aujourd'hui sur GB Radio</h2>
 				<ul data-role="listview">
 				<li data-role="list-divider" role="heading">Ce soir</li>
 					<?php
