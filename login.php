@@ -10,7 +10,7 @@ $requete = mysql_query($codesql) or die('Erreur SQL !<br>'.$codesql.'<br>'.mysql
 $data = mysql_fetch_assoc($requete);
 	if($data['password'] != $password) 
 	{
-	   	echo '<p>Mauvais login / password. Merci de recommencer</p>';
+	   	echo '<p>Mauvais login ou password. Merci de recommencer</p>';
 	    include('page_login.php');
 	    exit;
 	}
