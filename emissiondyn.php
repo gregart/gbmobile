@@ -12,7 +12,7 @@ $ligne=mysql_fetch_row($requete);
 
 $nom = $ligne[0];
 $heure = $ligne[1];
-$anim = $ligne[2];
+//$anim = $ligne[2];
 $jour = $ligne[3];
 $desc = $ligne[4];
 $theme = $ligne[5];
