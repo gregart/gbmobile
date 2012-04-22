@@ -40,13 +40,12 @@ if(!isset($_SESSION['login']))
 			</div>
 		
 			<div data-role="content">	
-				<p>
-					<h2>Mise A Jour<br/>
-					Salut <?php echo $_SESSION['login']; ?>!</h2>
+				<h2>Mise A Jour<br/>
+				Salut <?php echo $_SESSION['login']; ?>!</h2>
+				<fieldset data-role="fieldcontain">
 					<form name="formupdate" method="post" action="update.php" enctype="multipart/form-data" data-ajax="false">
-						<fieldset data-role="fieldcontain">
-							<div data-role="fieldcontain" class="ui-hide-label">
-								<label for="emission">Emission</label>
+						<div data-role="fieldcontain" class="ui-hide-label">
+							<label for="emission">Emission</label>
 								<select name="emission" id="emission" value="" data-prevent-focus-zoom="true"/>
 									<option>Emission</option>   
 							    	<?php
@@ -66,22 +65,25 @@ if(!isset($_SESSION['login']))
 							    	mysql_close($connexion)
 							    	?>
 							 	</select>
-							 	
-								<label for="date">Date</label>
+						 </div>
+						 <div data-role="fieldcontain" class="ui-hide-label">	
+							<label for="date">Date</label>
 								<input name="date" id="date" type="date" data-role="datebox" data-options='{"mode": "calbox", "afterToday": true, "calStartDay": 1, "calTodayButton": true}' placeholder="Date" data-prevent-focus-zoom="true"/>
-		
-								<label for="guest">Invite</label>
-								<input type="text" name="guest" id="guest" value="" placeholder="Invit&eacute;" data-prevent-focus-zoom="true"/></br>
-								
-								<label for="theme">Thème</label>
-								<input type="text" name="theme" id="theme" value="" placeholder="Thème" data-prevent-focus-zoom="true"/></br>
-							
-								<label for="maj">Mise à Jour</label>   
+						</div>
+						<div data-role="fieldcontain" class="ui-hide-label">
+							<label for="guest">Invite</label>
+								<input type="text" name="guest" id="guest" value="" placeholder="Invit&eacute;" data-prevent-focus-zoom="true"/>
+						</div>
+						<div data-role="fieldcontain" class="ui-hide-label">	
+							<label for="theme">Thème</label>
+								<input type="text" name="theme" id="theme" value="" placeholder="Thème" data-prevent-focus-zoom="true"/>
+						</div>
+						<div data-role="fieldcontain" class="ui-hide-label">
+							<label for="maj">Mise à Jour</label>   
 								<input type="submit" id="maj" value="Mise à Jour" data-theme="b"/>
-							</div>
-						</fieldset>
+						</div>
 					</form>
-				</p>		
+				</fieldset>		
 			</div>
 		</div>	
 	</body>
