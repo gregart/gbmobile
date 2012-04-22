@@ -8,7 +8,7 @@ extract($_POST);
 $codesql = "select password from user where login='".$login."'";
 $requete = mysql_query($codesql) or die('Erreur SQL !<br>'.$codesql.'<br>'.mysql_error());
 $data = mysql_fetch_assoc($requete);
-	if($data['password'] != $password) 
+	if($data['password'] != md5($password)) 
 	{
 	   	echo '<p>Mauvais login ou password. Merci de recommencer</p>';
 	    include('page_login.php');
