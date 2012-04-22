@@ -28,11 +28,7 @@ if(!isset($_SESSION['login']))
 			});
 		</script>
 	</head>
-	
-	
 	<body> 
-	
-
 		<div data-role="page" data-theme="e" data-content-theme="e">
 			<div data-role="header" data-id="myheader" data-position="fixed">
 				<h1>Update</h1>
@@ -56,17 +52,27 @@ if(!isset($_SESSION['login']))
 							    	mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
 							    	$requete=mysql_query($codesql)or die(mysql_error($connexion));		
 							    	
-							    	while ($ligne=mysql_fetch_row($requete))
-							    	{
-								    	$nom_em = $ligne[0];
-								    	$id_em = $ligne[1];
-								    	echo "<option value='$id_em'>$nom_em</option>";
-							    	}
+							    	//if (utilisateur est administrateur)
+							    		//{
+								    	while ($ligne=mysql_fetch_row($requete))
+								    	{
+									    	$nom_em = $ligne[0];
+									    	$id_em = $ligne[1];
+									    	echo "<option value='$id_em'>$nom_em</option>";
+								    	}
+								    	//}
+								    	//else
+								    	//{
+								    	//	$nom_em = emission du bon anim;
+								    	//	$id_em = id de l'emission correspondante;
+								    	//	echo "<option value='$id_em'>$nom_em</option>";
+								    	//}
+							    	
 							    	mysql_close($connexion)
 							    	?>
 							 	</select>
 						 </div>
-						 <div data-role="fieldcontain" class="ui-hide-label">	
+						<div data-role="fieldcontain" class="ui-hide-label">	
 							<label for="date">Date</label>
 								<input name="date" id="date" type="date" data-role="datebox" data-options='{"mode": "calbox", "afterToday": true, "calStartDay": 1, "calTodayButton": true}' placeholder="Date" data-prevent-focus-zoom="true"/>
 						</div>
