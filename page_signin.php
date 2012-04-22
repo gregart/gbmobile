@@ -28,7 +28,23 @@
 						<p>
 							<div data-role="fieldcontain" class="ui-hide-label">
 								<label for="password">Mot de passe :</label>
-								<input type="password" name="password" id="password" value="" placeholder="Mot de Passe" />
+								<input type="text" name="password" id="password" value="" placeholder="Mot de Passe" />
+							</div>    
+						</p>
+<!-- Donne des privilèges d'admin au nouveau membre -->						
+						<p>
+							<div data-role="fieldcontain">
+							    <fieldset data-role="controlgroup">
+								   <input type="checkbox" name="admin" id="admin" />
+								   <label for="admin">Administrateur</label>
+							    </fieldset>
+							</div>    
+						</p>
+<!-- Necessite le pass de l'admin pour l'input -->
+						<p>
+							<div data-role="fieldcontain" class="ui-hide-label">
+								<label for="passadmin">Mot de passe admin :</label>
+								<input type="password" name="passadmin" id="passadmin" value="" placeholder="Mot de Passe Admin" />
 							</div>    
 						</p>
 						<p>
