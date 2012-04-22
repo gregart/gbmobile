@@ -31,6 +31,18 @@
 								<input type="text" name="password" id="password" value="" placeholder="Mot de Passe" />
 							</div>    
 						</p>
+<!-- Scripts php à inserer -->						
+						<p>
+							<select name="emission" id="emission" value="" data-prevent-focus-zoom="true"/>
+								<option>Emission</option>   
+							    <optgroup label="Quotidiennes">
+							    	<option value='$id_em'>liste des quotid</option>
+							    </optgroup>
+							    <optgroup label="Hebdomadaires">
+							    	<option value='$id_em'>liste des hebdos</option>
+							    </optgroup>
+							</select>
+						</p>
 <!-- Donne des privilèges d'admin au nouveau membre -->						
 						<p>
 							<div data-role="fieldcontain">
