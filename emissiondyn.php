@@ -21,11 +21,12 @@ $date_next_em = $ligne[7];
 $id_em = $ligne[8];
 
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 	<head>
 		<title>GB Mobile</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8" />
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
