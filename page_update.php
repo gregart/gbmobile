@@ -7,11 +7,12 @@ if(!isset($_SESSION['login']))
 	  exit;
 	}
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 	<head>
 		<title>GB Mobile</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" /> 
 		
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
