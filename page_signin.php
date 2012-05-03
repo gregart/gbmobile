@@ -31,16 +31,53 @@
 								<label for="password">Mot de passe :</label>
 								<input type="text" name="password" id="password" value="" placeholder="Mot de Passe" />
 							</div>    
-						</p>
-<!-- Scripts php à inserer -->						
+						</p>						
 						<p>
 							<select name="emission" id="emission" value="" data-prevent-focus-zoom="true"/>
 								<option>Emission</option>   
 							    <optgroup label="Quotidiennes">
-							    	<option value='$id_em'>liste des quotid</option>
+							    	<?php
+							    	echo"test";
+							    	session_start();
+							    	
+							    	$codesql=("select nom_em, id_em from emission where hebdo='non' order by id_em");
+							    	$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
+							    	mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+							    	$requete=mysql_query($codesql)or die(mysql_error($connexion));		
+							    	
+							    	while ($ligne=mysql_fetch_row($requete))
+							    	{
+							    	
+							    	$nom = $ligne[0];
+							    	$id_em = $ligne[1];
+							    	
+							    	echo "<option value='$id_em'>$nom</option>";
+							    	
+							    	}
+							    	mysql_close($connexion);
+							    	?>
 							    </optgroup>
 							    <optgroup label="Hebdomadaires">
-							    	<option value='$id_em'>liste des hebdos</option>
+							    	<?php
+							    	echo"test";
+							    	session_start();
+							    	
+							    	$codesql=("select nom_em, id_em from emission where hebdo!='non' order by id_em");
+							    	$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
+							    	mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+							    	$requete=mysql_query($codesql)or die(mysql_error($connexion));		
+							    	
+							    	while ($ligne=mysql_fetch_row($requete))
+							    	{
+							    	
+							    	$nom = $ligne[0];
+							    	$id_em = $ligne[1];
+							    	
+							    	echo "<option value='$id_em'>$nom</option>";
+							    	
+							    	}
+							    	mysql_close($connexion);
+							    	?>
 							    </optgroup>
 							</select>
 						</p>

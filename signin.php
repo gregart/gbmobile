@@ -3,6 +3,7 @@
 $login=$_POST['login'];
 $password=md5($_POST['password']);
 $passadmin=$_POST['passadmin'];
+$emission=$_POST['emission'];
 
 
 if($login!="" && $_POST['password']!="" && $passadmin=="hdncks")
@@ -11,7 +12,7 @@ if($login!="" && $_POST['password']!="" && $passadmin=="hdncks")
 	
 	mysql_select_db("mobile",$connexion) or die(mysql_error($connexion));
 	
-	$requete=mysql_query("insert into user(login,password) values('$login','$password')") or die(mysql_error($connexion));
+	$requete=mysql_query("insert into user(login,password,id_em) values('$login','$password','$emission')") or die(mysql_error($connexion));
 	
 	mysql_close($connexion);
 	
