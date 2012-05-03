@@ -70,7 +70,7 @@
 					$anim = $ligne[2];
 					$id_em = $ligne[3];
 					echo "
-							<li data-theme='e'><a href='emissiondyn.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
+							<li data-theme='e'><a href='detail_emissions.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
 								<h3 class='ui-li-heading'>$nom_em</h3>
 								<p><b>";echo " à $heure_em </b>avec $anim.</p>
 							</a></li>
@@ -101,7 +101,7 @@
 					if ($hebdo!="non")
 						{
 						echo "
-								<li data-theme='e'><a href='emissiondyn.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
+								<li data-theme='e'><a href='detail_emissions.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
 									<h3 class='ui-li-heading'>$nom_em</h3>
 									<p>Avec : $anim chaque semaine à $heure_em</p>
 								</a></li>
@@ -110,7 +110,7 @@
 					else
 						{
 						echo "
-								<li><a href='emissiondyn.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
+								<li><a href='detail_emissions.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
 									<h3 class='ui-li-heading'>$nom_em</h3>
 									<p><b>";echo " à $heure_em </b>avec $anim.</p>
 								</a></li>
