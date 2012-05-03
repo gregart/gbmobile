@@ -54,7 +54,7 @@
 					$jour = $ligne[4];
 					
 					echo "
-							<li><a href='emissiondyn.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
+							<li><a href='detail_emissions.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
 								<h3 class='ui-li-heading'>$nom_em</h3>
 								<p>
 									 <b>"; switch($jour)
@@ -105,7 +105,7 @@
 					$id_em = $ligne[3];
 					
 					echo "
-							<li><a href='emissiondyn.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
+							<li><a href='detail_emissions.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
 								<h3 class='ui-li-heading'>$nom_em</h3>
 								<p>
 									 <b>Tous les jours à $heure_em </b>

@@ -21,8 +21,8 @@
 			</div>
 		
 			<div data-role="content">	
-				<h2>Bien essayé! Soit Patient!</h2>
-				<center><img src="img/fusee.gif" height="70%"><img/></center>
+				<h2>Erreur!</h2>
+				
 			</div>
 		
 			<div data-role="footer" data-id="myfooter" data-position="fixed">
