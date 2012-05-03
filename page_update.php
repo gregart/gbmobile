@@ -50,17 +50,16 @@ if(!isset($_SESSION['login']))
 									<option>Emission</option>   
 							    	<?php
 							    	session_start();
-							    	
-							    	$codesql=("select nom_em,id_em from emission order by nom_em");
+							    	$login=$_SESSION['login'];
 							    	$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
 							    	mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
-							    	$requete=mysql_query($codesql)or die(mysql_error($connexion));		
+							    	$requete=mysql_query("select id_em from user where login='$login'")or die(mysql_error($connexion));		
 							    	
 							    	while ($ligne=mysql_fetch_row($requete))
 							    	{
-								    	$nom_em = $ligne[0];
-								    	$id_em = $ligne[1];
-								    	echo "<option value='$id_em'>$nom_em</option>";
+							    		$nom_em = $ligne[0];
+							    		$id_em = $ligne[1];
+							    		echo "<option value='$id_em'>$nom_em</option>";
 							    	}
 							    	mysql_close($connexion)
 							    	?>

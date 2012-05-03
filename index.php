@@ -3,7 +3,7 @@
 	<head>
 		<title>GB Mobile</title>
 		<link rel="icon" type="image/png" href="/img/iconhdgb.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />
 
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
@@ -59,7 +59,8 @@
 					
 					$codesql=("select nom_em, heure_em, anim_em, id_em from emission where hebdo='soir' and dayname(now())=jour");
 					$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
-					mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+					mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));
+					mysql_query("SET NAMES 'utf8'");					
 					$requete=mysql_query($codesql)or die(mysql_error($connexion));		
 					
 					while ($ligne=mysql_fetch_row($requete))
@@ -83,7 +84,8 @@
 					
 					$codesql=("select nom_em, heure_em, anim_em, id_em,hebdo from emission where hebdo='non' or (hebdo='midi' and dayname(now())=jour) order by id_em asc");
 					$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
-					mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+					mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));
+					mysql_query("SET NAMES 'utf8'");
 					$requete=mysql_query($codesql)or die(mysql_error($connexion));		
 					
 					
@@ -124,7 +126,7 @@
 				<div data-role="navbar">
 					<ul>
 <!--hebdo/player/tel-->
-						<li><a href="liste_emissions.php" data-role="button" data-icon="grid" data-iconpos="top">Nos programmes</a></li>
+						<li><a href="hebdodyn.php" data-role="button" data-icon="grid" data-iconpos="top">Nos programmes</a></li>
 						<li><a href="javascript:playPause();" data-role="button" data-icon="gb" data-iconpos="top">GB Live!</a></li>
 						<li><a href="tel:+33320889972" data-role="button" data-icon="star" data-iconpos="top">Tel.</a></li>
 					</ul>
