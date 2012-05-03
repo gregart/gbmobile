@@ -92,9 +92,9 @@ $id_em = $ligne[8];
 							<?php echo $desc; ?> <br/><br/>
 							
 							<?php
-							if($theme!="-")
+							if($theme!="")
 							echo "<input type='submit' id='' value='$theme' data-theme='e'/><br/>";
-							if($invit!="-")
+							if($invit!="")
 							echo "<input type='submit' id='' value='Invité du $date_next_em : $invit' data-theme='e'/>";
 							?>
 						</p>
