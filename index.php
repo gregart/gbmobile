@@ -124,7 +124,7 @@
 				<div data-role="navbar">
 					<ul>
 <!--hebdo/player/tel-->
-						<li><a href="hebdodyn.php" data-role="button" data-icon="grid" data-iconpos="top">Nos programmes</a></li>
+						<li><a href="liste_emissions.php" data-role="button" data-icon="grid" data-iconpos="top">Nos programmes</a></li>
 						<li><a href="javascript:playPause();" data-role="button" data-icon="gb" data-iconpos="top">GB Live!</a></li>
 						<li><a href="tel:+33320889972" data-role="button" data-icon="star" data-iconpos="top">Tel.</a></li>
 					</ul>

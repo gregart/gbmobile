@@ -1,8 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 	<head>
 		<title>GB Mobile</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+		<meta charset="utf-8" />
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
@@ -28,7 +29,26 @@
 						<p>
 							<div data-role="fieldcontain" class="ui-hide-label">
 								<label for="password">Mot de passe :</label>
-								<input type="password" name="password" id="password" value="" placeholder="Mot de Passe" />
+								<input type="text" name="password" id="password" value="" placeholder="Mot de Passe" />
+							</div>    
+						</p>
+<!-- Scripts php à inserer -->						
+						<p>
+							<select name="emission" id="emission" value="" data-prevent-focus-zoom="true"/>
+								<option>Emission</option>   
+							    <optgroup label="Quotidiennes">
+							    	<option value='$id_em'>liste des quotid</option>
+							    </optgroup>
+							    <optgroup label="Hebdomadaires">
+							    	<option value='$id_em'>liste des hebdos</option>
+							    </optgroup>
+							</select>
+						</p>
+<!-- Necessite le pass de l'admin pour l'input -->
+						<p>
+							<div data-role="fieldcontain" class="ui-hide-label">
+								<label for="passadmin">Mot de passe admin :</label>
+								<input type="password" name="passadmin" id="passadmin" value="" placeholder="Mot de Passe Admin" />
 							</div>    
 						</p>
 						<p>

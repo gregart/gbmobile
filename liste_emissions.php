@@ -1,15 +1,16 @@
+<!DOCTYPE html>
 
-
-<html>
+<html lang="fr">
 	<head>
 		<title>GB Mobile</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+		
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		
 		<script type="text/javascript">
 		       function playPause() {
 		       var song = document.getElementsByTagName('audio')[0];
@@ -32,8 +33,9 @@
 			</div>
 		
 			<div data-role="content">	
-				<p>
+				<p>Retrouvez ici le détail de tous nos programmes! Les horaires, animateurs et émissions n'auront plus de secrets pour vous! 
 				<ul data-role="listview">
+				<li data-role="list-divider" role="heading">Nos programmes hebdomadaires</li>
 					<?php
 					session_start();
 					
@@ -73,8 +75,41 @@
 												        echo 'Vendredi';
 												    break;
 												}
-											 echo " &agrave; $heure_em 
+											 echo " à $heure_em 
 									</b>avec $anim.
+								</p>
+							</a></li>
+						 ";
+					}
+					mysql_close($connexion)
+					?>
+						
+				</p>		
+			
+			
+			<li data-role="list-divider" role="heading">Nos programmes journaliers</li>
+					<?php
+					session_start();
+					
+					$codesql=("select nom_em, heure_em, anim_em, id_em, jour from emission where hebdo='non' order by id_em");
+					$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
+					mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+					$requete=mysql_query($codesql)or die(mysql_error($connexion));		
+					
+					while ($ligne=mysql_fetch_row($requete))
+					{
+					
+					$nom_em = $ligne[0];
+					$heure_em = $ligne[1];
+					$anim = $ligne[2];
+					$id_em = $ligne[3];
+					
+					echo "
+							<li><a href='emissiondyn.php?id_em=$id_em'><img src='img/logo/$id_em.png'>
+								<h3 class='ui-li-heading'>$nom_em</h3>
+								<p>
+									 <b>Tous les jours à $heure_em </b>
+									avec $anim.
 								</p>
 							</a></li>
 						 ";
@@ -84,10 +119,13 @@
 				</ul>		
 				</p>		
 			</div>
-		
+			
+			
 			<div data-role="footer" data-id="myfooter" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
+					
+					
 <!--home/player/tel-->
 						<li><a href="index.php" data-role="button" data-icon="home" data-iconpos="top">Home</a></li>
 						<li><a href="javascript:playPause();" data-role="button" data-icon="gb" data-iconpos="top">GB Live!</a></li>
