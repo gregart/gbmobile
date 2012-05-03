@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
+<html>
 	<head>
 		<title>GB Mobile</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
