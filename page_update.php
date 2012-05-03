@@ -46,19 +46,18 @@ if(!isset($_SESSION['login']))
 					<form name="formupdate" method="post" action="update.php" enctype="multipart/form-data" data-ajax="false">
 						<div data-role="fieldcontain" class="ui-hide-label">
 							<label for="emission">Emission</label>
-								<select name="emission" id="emission" value="" data-prevent-focus-zoom="true"/>
-									<option>Emission</option>   
+								<select name="emission" id="emission" value="" data-prevent-focus-zoom="true"/>   
 							    	<?php
 							    	session_start();
 							    	$login=$_SESSION['login'];
 							    	$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
 							    	mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
-							    	$requete=mysql_query("select id_em from user where login='$login'")or die(mysql_error($connexion));		
+							    	$requete=mysql_query("select user.id_em,nom_em from user inner join emission on user.id_em=emission.id_em where user.login='$login'")or die(mysql_error($connexion));		
 							    	
 							    	while ($ligne=mysql_fetch_row($requete))
 							    	{
-							    		$nom_em = $ligne[0];
-							    		$id_em = $ligne[1];
+							    		$id_em = $ligne[0];
+							    		$nom_em = $ligne[1];
 							    		echo "<option value='$id_em'>$nom_em</option>";
 							    	}
 							    	mysql_close($connexion)
