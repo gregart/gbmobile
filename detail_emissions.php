@@ -6,6 +6,7 @@ $codesql=("select nom_em, heure_em, anim_em, jour, desc_em, theme_em, invit_em, 
 
 $connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
 mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+mysql_query("SET NAMES 'utf8'");
 $requete=mysql_query($codesql)or die(mysql_error($connexion));		
 
 $ligne=mysql_fetch_row($requete);
@@ -24,8 +25,7 @@ $id_em = $ligne[8];
 <html>
 	<head>
 		<title>GB Mobile</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
@@ -91,8 +91,12 @@ $id_em = $ligne[8];
 						<p>
 							<?php echo $desc; ?> <br/><br/>
 							
-							<input type="submit" id="azerty" value="Th&egrave;me : <?php echo $theme; ?>" data-theme="e"/><br/>
-							<input type="submit" id="qsdfgh" value="Invit&eacute; du <?php echo $date_next_em; ?> : <?php echo $invit; ?>" data-theme="e"/>
+							<?php
+							if($theme!="-")
+							echo "<input type='submit' id='' value='$theme' data-theme='e'/><br/>";
+							if($invit!="-")
+							echo "<input type='submit' id='' value='Invité du $date_next_em : $invit' data-theme='e'/>";
+							?>
 						</p>
 				</fieldset>			
 			</div>
