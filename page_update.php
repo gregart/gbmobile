@@ -40,7 +40,7 @@ if(!isset($_SESSION['login']))
 			</div>
 		
 			<div data-role="content">	
-				<h2>Mise A Jour<br/>
+				<h2>Mise à Jour<br/>
 				Salut <?php echo $_SESSION['login']; ?>!</h2>
 				<fieldset data-role="fieldcontain">
 					<form name="formupdate" method="post" action="update.php" enctype="multipart/form-data" data-ajax="false">
@@ -52,15 +52,22 @@ if(!isset($_SESSION['login']))
 							    	$login=$_SESSION['login'];
 							    	$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
 							    	mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
-							    	$requete=mysql_query("select user.id_em,nom_em from user inner join emission on user.id_em=emission.id_em where user.login='$login'")or die(mysql_error($connexion));		
-							    	
+							    	if($login!="admin")
+								    	{
+								    	$requete=mysql_query("select user.id_em,nom_em,admin from user inner join emission on user.id_em=emission.id_em where user.login='$login'")or die(mysql_error($connexion));
+								  		}
+							  		else
+							  			{
+							  			$requete=mysql_query("select id_em,nom_em from emission order by id_em")or die(mysql_error($connexion));
+							  			}
 							    	while ($ligne=mysql_fetch_row($requete))
-							    	{
-							    		$id_em = $ligne[0];
-							    		$nom_em = $ligne[1];
-							    		echo "<option value='$id_em'>$nom_em</option>";
-							    	}
-							    	mysql_close($connexion)
+							    			{
+						    				$id_em = $ligne[0];
+						    				$nom_em = $ligne[1];
+						    				echo "<option value='$id_em'>$nom_em</option>";
+							    			}
+							    	
+							    	mysql_close($connexion);
 							    	?>
 							 	</select>
 						 </div>
