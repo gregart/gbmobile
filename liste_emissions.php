@@ -42,6 +42,7 @@
 					$codesql=("select nom_em, heure_em, anim_em, id_em, jour from emission where hebdo!='non' order by id_em");
 					$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
 					mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+					mysql_query("SET NAMES 'utf8'");
 					$requete=mysql_query($codesql)or die(mysql_error($connexion));		
 					
 					while ($ligne=mysql_fetch_row($requete))
@@ -94,6 +95,7 @@
 					$codesql=("select nom_em, heure_em, anim_em, id_em, jour from emission where hebdo='non' order by id_em");
 					$connexion=mysql_connect("localhost","root","kja5s6ti") or die(mysql_error($connexion));
 					mysql_select_db("mobile",$connexion)or die(mysql_error($connexion));	
+					mysql_query("SET NAMES 'utf8'");
 					$requete=mysql_query($codesql)or die(mysql_error($connexion));		
 					
 					while ($ligne=mysql_fetch_row($requete))
