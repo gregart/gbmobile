@@ -3,8 +3,14 @@
 	<head>
 		<title>GB Mobile</title>
 		<link rel="icon" type="image/png" href="/img/iconhdgb.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />
-
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" charset="UTF-8" />
+		<!-- Gestion WebApp iPhone-->
+		<!-- Autoriser le fonctionnement de la page hors de Safari avec un icone sur le Springboard -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- Changer la couleur de la Status Bar en noir-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!--Images Startup et Springboard du chargement de la WebApp-->
+		<link rel="apple-touch-startup-image" href="/img/startup.png">
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
