@@ -10,7 +10,7 @@
 		<!-- Changer la couleur de la Status Bar en noir-->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<!--Images Startup et Springboard du chargement de la WebApp-->
-		<link rel="apple-touch-startup-image" href="/img/startup.png">
+		<link rel="apple-touch-startup-image" href="img/startup.png">
 		<!--***3 lignes à changer pour mettre à jour JQM***-->
 		<link rel="stylesheet" href="cssperso.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
