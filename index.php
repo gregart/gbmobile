@@ -43,10 +43,16 @@
 					}   	
 }
 		</script>
+		<script>
+			function BlockMove(event) {
+			<!-- Empêche Safari de faire apparaitre une page "élastique"-->
+				event.preventDefault() ;
+										}
+		</script>
 	</head>
 	
 	
-	<body> 
+	<body ontouchmove="BlockMove(event);" > 
 	
 		<div data-role="page">
 		
