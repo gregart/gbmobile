@@ -1,3 +1,12 @@
-.ui-icon-gb {
-	background-image: url("/img/icongbfooter.png");
+a[data-icon=""] {
+	background : url("/img/icongbfooter.png");
+	background-repeat : no-repeat;
+	background-position : top center;
+}
+
+a[data-icon="telephone"] {
+	background : url("/img/icone_tel.png");
+	background-repeat : no-repeat;
+	background-position : top center;
+	opacity:1;
 }
