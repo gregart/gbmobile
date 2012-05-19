@@ -59,7 +59,7 @@
 			<div data-role="header" data-id="myheader" data-position="fixed">
 			
 				<h1>GB Mobile</h1>
-				<audio id="audioplayer" src="http://88.191.134.148:8000/streamhd.mp3" preload="none"></audio>
+				<audio id="audioplayer" src="http://88.191.134.148:8000/streamhd.mp3" preload="auto"></audio>
 			</div>
 		
 			<div data-role="content">	
