@@ -60,6 +60,8 @@
 			
 				<h1>GB Mobile</h1>
 				<audio id="audioplayer" src="http://88.191.134.148:8000/streamhd.mp3" preload="auto"></audio>
+				<a href="Page_login.php" class="ui-btn-left" data-theme="e">Retour</a>
+				<a href="chat.html" class="ui-btn-right" data-theme="b">Chat</a>
 			</div>
 		
 			<div data-role="content">	
